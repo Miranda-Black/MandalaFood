@@ -1,0 +1,3352 @@
+[
+  {
+    "article": "Almonds in shell",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw almonds",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole almonds",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "almond kernels",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "almonds unshelled",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "almond nuts",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "almonds (unshelld)",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Areca nuts",
+    "expected_item": "Areca nuts",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "betel nuts",
+    "expected_item": "Areca nuts",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole areca nuts",
+    "expected_item": "Areca nuts",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Bambara beans dry",
+    "expected_item": "Bambara beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried bambara beans",
+    "expected_item": "Bambara beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Beans dry",
+    "expected_item": "Beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried beans",
+    "expected_item": "Beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "mixed dried beans",
+    "expected_item": "Beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Brazil nuts in shell",
+    "expected_item": "Brazil nuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw brazil nuts",
+    "expected_item": "Brazil nuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Broad beans dry",
+    "expected_item": "Broad beans and horse beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "horse beans dry",
+    "expected_item": "Broad beans and horse beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Broad beans green",
+    "expected_item": "Broad beans and horse beans; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh broad beans",
+    "expected_item": "Broad beans and horse beans; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cashew nuts in shell",
+    "expected_item": "Cashew nuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw cashews",
+    "expected_item": "Cashew nuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Castor oil seeds",
+    "expected_item": "Castor oil seeds",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "castor beans",
+    "expected_item": "Castor oil seeds",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Chestnuts in shell",
+    "expected_item": "Chestnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw chestnuts",
+    "expected_item": "Chestnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Chick peas dry",
+    "expected_item": "Chick peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "garbanzo beans",
+    "expected_item": "Chick peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Cow peas dry",
+    "expected_item": "Cow peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried cowpeas",
+    "expected_item": "Cow peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Groundnuts in shell",
+    "expected_item": "Groundnuts; excluding shelled",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "peanuts in shell",
+    "expected_item": "Groundnuts; excluding shelled",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Hazelnuts in shell",
+    "expected_item": "Hazelnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw hazelnuts",
+    "expected_item": "Hazelnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Hemp seeds",
+    "expected_item": "Hempseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Lentils dry",
+    "expected_item": "Lentils; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole lentils",
+    "expected_item": "Lentils; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Linseed",
+    "expected_item": "Linseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "flaxseed",
+    "expected_item": "Linseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Melon seeds",
+    "expected_item": "Melonseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Mustard seeds",
+    "expected_item": "Mustard seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Pigeon peas dry",
+    "expected_item": "Pigeon peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Pistachios in shell",
+    "expected_item": "Pistachios; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw pistachios",
+    "expected_item": "Pistachios; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Poppy seeds",
+    "expected_item": "Poppy seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Rapeseed",
+    "expected_item": "Rape or colza seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Safflower seeds",
+    "expected_item": "Safflower seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Sesame seeds",
+    "expected_item": "Sesame seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Sunflower seeds",
+    "expected_item": "Sunflower seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Taro root",
+    "expected_item": "Taro",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Walnuts in shell",
+    "expected_item": "Walnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw walnuts",
+    "expected_item": "Walnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Anise raw",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole anise seeds",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "aniseed",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "anise (anis)",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Badian raw",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "star anise",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Coriander raw",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole coriander seeds",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Cumin raw",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole cumin seeds",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Caraway raw",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole caraway seeds",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Fennel raw",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole fennel seeds",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Juniper berries raw",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole juniper berries",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Cinnamon raw",
+    "expected_item": "Cinnamon and cinnamon-tree flowers; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "cinnamon sticks",
+    "expected_item": "Cinnamon and cinnamon-tree flowers; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "ground cinnamon",
+    "expected_item": "Cinnamon and cinnamon-tree flowers; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Cinnamon-tree flowers raw",
+    "expected_item": "Cinnamon and cinnamon-tree flowers; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Cloves raw",
+    "expected_item": "Cloves (whole stems); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole cloves",
+    "expected_item": "Cloves (whole stems); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "clove stems",
+    "expected_item": "Cloves (whole stems); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Cocoa beans",
+    "expected_item": "Cocoa beans",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "raw cocoa beans",
+    "expected_item": "Cocoa beans",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "cacao beans",
+    "expected_item": "Cocoa beans",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Coffee green",
+    "expected_item": "Coffee; green",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "green coffee beans",
+    "expected_item": "Coffee; green",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "raw coffee beans",
+    "expected_item": "Coffee; green",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Ginger raw",
+    "expected_item": "Ginger; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "fresh ginger root",
+    "expected_item": "Ginger; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole ginger",
+    "expected_item": "Ginger; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Maté leaves",
+    "expected_item": "Maté leaves",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "yerba mate leaves",
+    "expected_item": "Maté leaves",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Nutmeg raw",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole nutmeg",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Mace raw",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole mace",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Cardamoms raw",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole cardamom pods",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Pepper raw",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole black peppercorns",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "white peppercorns",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "green peppercorns",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Tea leaves",
+    "expected_item": "Tea leaves",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "black tea leaves",
+    "expected_item": "Tea leaves",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "green tea leaves",
+    "expected_item": "Tea leaves",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Vanilla raw",
+    "expected_item": "Vanilla; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole vanilla beans",
+    "expected_item": "Vanilla; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "vanilla pods",
+    "expected_item": "Vanilla; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "mixed whole spices",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "spice mix",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "herb and spice blend",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Apples",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh apples",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "red apples",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green apples",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Apricots",
+    "expected_item": "Apricots",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh apricots",
+    "expected_item": "Apricots",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Artichokes",
+    "expected_item": "Artichokes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh artichokes",
+    "expected_item": "Artichokes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Asparagus",
+    "expected_item": "Asparagus",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh asparagus",
+    "expected_item": "Asparagus",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Avocados",
+    "expected_item": "Avocados",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh avocados",
+    "expected_item": "Avocados",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Bananas",
+    "expected_item": "Bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "ripe bananas",
+    "expected_item": "Bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Blueberries",
+    "expected_item": "Blueberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh blueberries",
+    "expected_item": "Blueberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cabbages",
+    "expected_item": "Cabbages",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green cabbage",
+    "expected_item": "Cabbages",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cantaloupes and other melons",
+    "expected_item": "Cantaloupes and other melons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "cantaloupe melon",
+    "expected_item": "Cantaloupes and other melons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Carrots and turnips",
+    "expected_item": "Carrots and turnips",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh carrots",
+    "expected_item": "Carrots and turnips",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole turnips",
+    "expected_item": "Carrots and turnips",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cauliflowers and broccoli",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh cauliflower",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh broccoli",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cherries",
+    "expected_item": "Cherries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh cherries",
+    "expected_item": "Cherries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Chillies and peppers raw",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh chillies",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh peppers",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Chillies and peppers green",
+    "expected_item": "Chillies and peppers; green (Capsicum spp. and Pimenta spp.)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green peppers",
+    "expected_item": "Chillies and peppers; green (Capsicum spp. and Pimenta spp.)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Coconuts in shell",
+    "expected_item": "Coconuts; in shell",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole coconuts",
+    "expected_item": "Coconuts; in shell",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cranberries",
+    "expected_item": "Cranberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh cranberries",
+    "expected_item": "Cranberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cucumbers and gherkins",
+    "expected_item": "Cucumbers and gherkins",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh cucumbers",
+    "expected_item": "Cucumbers and gherkins",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Currants",
+    "expected_item": "Currants",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh currants",
+    "expected_item": "Currants",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Dates",
+    "expected_item": "Dates",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh dates",
+    "expected_item": "Dates",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Eggplants (aubergines)",
+    "expected_item": "Eggplants (aubergines)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh eggplants",
+    "expected_item": "Eggplants (aubergines)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Figs",
+    "expected_item": "Figs",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh figs",
+    "expected_item": "Figs",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Gooseberries",
+    "expected_item": "Gooseberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh gooseberries",
+    "expected_item": "Gooseberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Grapes",
+    "expected_item": "Grapes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh grapes",
+    "expected_item": "Grapes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "red grapes",
+    "expected_item": "Grapes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green grapes",
+    "expected_item": "Grapes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Green garlic",
+    "expected_item": "Green garlic",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh green garlic",
+    "expected_item": "Green garlic",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Kiwi fruit",
+    "expected_item": "Kiwi fruit",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh kiwis",
+    "expected_item": "Kiwi fruit",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Leeks and other alliaceous vegetables",
+    "expected_item": "Leeks and other alliaceous vegetables",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh leeks",
+    "expected_item": "Leeks and other alliaceous vegetables",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Lemons and limes",
+    "expected_item": "Lemons and limes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh lemons",
+    "expected_item": "Lemons and limes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh limes",
+    "expected_item": "Lemons and limes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Lettuce and chicory",
+    "expected_item": "Lettuce and chicory",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh lettuce",
+    "expected_item": "Lettuce and chicory",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh chicory",
+    "expected_item": "Lettuce and chicory",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Locust beans (carobs)",
+    "expected_item": "Locust beans (carobs)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "carob pods",
+    "expected_item": "Locust beans (carobs)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Mangoes; guavas and mangosteens",
+    "expected_item": "Mangoes; guavas and mangosteens",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh mangoes",
+    "expected_item": "Mangoes; guavas and mangosteens",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh guavas",
+    "expected_item": "Mangoes; guavas and mangosteens",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh mangosteens",
+    "expected_item": "Mangoes; guavas and mangosteens",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Mushrooms and truffles",
+    "expected_item": "Mushrooms and truffles",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh mushrooms",
+    "expected_item": "Mushrooms and truffles",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh truffles",
+    "expected_item": "Mushrooms and truffles",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Okra",
+    "expected_item": "Okra",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh okra",
+    "expected_item": "Okra",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Olives",
+    "expected_item": "Olives",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh olives",
+    "expected_item": "Olives",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Onions and shallots dry",
+    "expected_item": "Onions and shallots; dry (excluding dehydrated)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "dry onions",
+    "expected_item": "Onions and shallots; dry (excluding dehydrated)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "dry shallots",
+    "expected_item": "Onions and shallots; dry (excluding dehydrated)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Onions and shallots green",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green onions",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "spring onions",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Oranges",
+    "expected_item": "Oranges",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh oranges",
+    "expected_item": "Oranges",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "red oranges",
+    "expected_item": "Oranges",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green oranges",
+    "expected_item": "Oranges",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Papayas",
+    "expected_item": "Papayas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh papayas",
+    "expected_item": "Papayas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Peaches and nectarines",
+    "expected_item": "Peaches and nectarines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh peaches",
+    "expected_item": "Peaches and nectarines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh nectarines",
+    "expected_item": "Peaches and nectarines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pears",
+    "expected_item": "Pears",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh pears",
+    "expected_item": "Pears",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Peas green",
+    "expected_item": "Peas; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh green peas",
+    "expected_item": "Peas; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Persimmons",
+    "expected_item": "Persimmons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh persimmons",
+    "expected_item": "Persimmons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pineapples",
+    "expected_item": "Pineapples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh pineapples",
+    "expected_item": "Pineapples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Plantains and cooking bananas",
+    "expected_item": "Plantains and cooking bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh plantains",
+    "expected_item": "Plantains and cooking bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Plums and sloes",
+    "expected_item": "Plums and sloes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh plums",
+    "expected_item": "Plums and sloes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh sloes",
+    "expected_item": "Plums and sloes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pomelos and grapefruits",
+    "expected_item": "Pomelos and grapefruits",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh pomelos",
+    "expected_item": "Pomelos and grapefruits",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh grapefruits",
+    "expected_item": "Pomelos and grapefruits",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pumpkins; squash and gourds",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh pumpkins",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh squash",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh gourds",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Quinces",
+    "expected_item": "Quinces",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh quinces",
+    "expected_item": "Quinces",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Raspberries",
+    "expected_item": "Raspberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh raspberries",
+    "expected_item": "Raspberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Sour cherries",
+    "expected_item": "Sour cherries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh sour cherries",
+    "expected_item": "Sour cherries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Spinach",
+    "expected_item": "Spinach",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh spinach",
+    "expected_item": "Spinach",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Strawberries",
+    "expected_item": "Strawberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh strawberries",
+    "expected_item": "Strawberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Tangerines; mandarins; clementines",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh tangerines",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh mandarins",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh clementines",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Tomatoes",
+    "expected_item": "Tomatoes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh tomatoes",
+    "expected_item": "Tomatoes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Watermelons",
+    "expected_item": "Watermelons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh watermelons",
+    "expected_item": "Watermelons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Other beans green",
+    "expected_item": "Other beans; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh green beans",
+    "expected_item": "Other beans; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Other berries and fruits of genus vaccinium",
+    "expected_item": "Other berries and fruits of the genus vaccinium n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "wild vaccinium berries",
+    "expected_item": "Other berries and fruits of the genus vaccinium n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Other fruits n.e.c.",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "mixed fresh fruits",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Other tropical fruits n.e.c.",
+    "expected_item": "Other tropical fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "mixed tropical fruits",
+    "expected_item": "Other tropical fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Other vegetables fresh n.e.c.",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "mixed fresh vegetables",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Barley",
+    "expected_item": "Barley",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole barley grain",
+    "expected_item": "Barley",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "barley kernels",
+    "expected_item": "Barley",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Buckwheat",
+    "expected_item": "Buckwheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole buckwheat",
+    "expected_item": "Buckwheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "buckwheat groats",
+    "expected_item": "Buckwheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Chicory roots",
+    "expected_item": "Chicory roots",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole chicory roots",
+    "expected_item": "Chicory roots",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Fonio",
+    "expected_item": "Fonio",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole fonio grain",
+    "expected_item": "Fonio",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Green corn (maize)",
+    "expected_item": "Green corn (maize)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "fresh maize",
+    "expected_item": "Green corn (maize)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "maize kernels",
+    "expected_item": "Green corn (maize)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Maize (corn)",
+    "expected_item": "Maize (corn)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole corn kernels",
+    "expected_item": "Maize (corn)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "corn grain",
+    "expected_item": "Maize (corn)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Millet",
+    "expected_item": "Millet",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole millet grain",
+    "expected_item": "Millet",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Mixed grain",
+    "expected_item": "Mixed grain",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "grain mix",
+    "expected_item": "Mixed grain",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Oats",
+    "expected_item": "Oats",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole oats",
+    "expected_item": "Oats",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "oat kernels",
+    "expected_item": "Oats",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Potatoes",
+    "expected_item": "Potatoes",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole potatoes",
+    "expected_item": "Potatoes",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Quinoa",
+    "expected_item": "Quinoa",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole quinoa",
+    "expected_item": "Quinoa",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "quinoa grain",
+    "expected_item": "Quinoa",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Rice",
+    "expected_item": "Rice",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole rice grain",
+    "expected_item": "Rice",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "rice kernels",
+    "expected_item": "Rice",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Sweet potatoes",
+    "expected_item": "Sweet potatoes",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole sweet potatoes",
+    "expected_item": "Sweet potatoes",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Taro (root)",
+    "expected_item": "Taro",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole taro root",
+    "expected_item": "Taro",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Triticale",
+    "expected_item": "Triticale",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole triticale grain",
+    "expected_item": "Triticale",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Wheat",
+    "expected_item": "Wheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole wheat grain",
+    "expected_item": "Wheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "wheat kernels",
+    "expected_item": "Wheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Yams",
+    "expected_item": "Yams",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole yams",
+    "expected_item": "Yams",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Yautia",
+    "expected_item": "Yautia",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole yautia root",
+    "expected_item": "Yautia",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Hen eggs in shell; fresh",
+    "expected_item": "Hen eggs in shell; fresh",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "fresh hen eggs",
+    "expected_item": "Hen eggs in shell; fresh",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "whole eggs",
+    "expected_item": "Hen eggs in shell; fresh",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "chicken eggs",
+    "expected_item": "Hen eggs in shell; fresh",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "Eggs from other birds in shell; fresh; n.e.c.",
+    "expected_item": "Eggs from other birds in shell; fresh; n.e.c.",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "duck eggs",
+    "expected_item": "Eggs from other birds in shell; fresh; n.e.c.",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "goose eggs",
+    "expected_item": "Eggs from other birds in shell; fresh; n.e.c.",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "quail eggs",
+    "expected_item": "Eggs from other birds in shell; fresh; n.e.c.",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "Raw milk of cattle",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "fresh cow milk",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "raw milk",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "raw milk cheese",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "fresh dairy milk",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "whole dairy milk",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "Meat of buffalo; fresh or chilled",
+    "expected_item": "Meat of buffalo; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "fresh buffalo meat",
+    "expected_item": "Meat of buffalo; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "buffalo steak",
+    "expected_item": "Meat of buffalo; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "buffalo meat cuts",
+    "expected_item": "Meat of buffalo; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "Meat of cattle with the bone; fresh or chilled",
+    "expected_item": "Meat of cattle with the bone; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "fresh beef with bone",
+    "expected_item": "Meat of cattle with the bone; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "beef on the bone",
+    "expected_item": "Meat of cattle with the bone; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "cattle meat bone-in",
+    "expected_item": "Meat of cattle with the bone; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "Meat of goat; fresh or chilled",
+    "expected_item": "Meat of goat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "fresh goat meat",
+    "expected_item": "Meat of goat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "goat meat cuts",
+    "expected_item": "Meat of goat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "goat stew meat",
+    "expected_item": "Meat of goat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "Meat of sheep; fresh or chilled",
+    "expected_item": "Meat of sheep; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "fresh sheep meat",
+    "expected_item": "Meat of sheep; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "mutton",
+    "expected_item": "Meat of sheep; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "sheep meat cuts",
+    "expected_item": "Meat of sheep; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "Meat of rabbits and hares; fresh or chilled",
+    "expected_item": "Meat of rabbits and hares; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "fresh rabbit meat",
+    "expected_item": "Meat of rabbits and hares; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "fresh hare meat",
+    "expected_item": "Meat of rabbits and hares; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "rabbit carcass",
+    "expected_item": "Meat of rabbits and hares; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "Meat of chickens; fresh or chilled",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "fresh chicken meat",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "chicken breast",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "chicken thighs",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "whole chicken",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "Meat of ducks; fresh or chilled",
+    "expected_item": "Meat of ducks; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "fresh duck meat",
+    "expected_item": "Meat of ducks; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "duck breast",
+    "expected_item": "Meat of ducks; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "whole duck",
+    "expected_item": "Meat of ducks; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "Meat of geese; fresh or chilled",
+    "expected_item": "Meat of geese; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "fresh goose meat",
+    "expected_item": "Meat of geese; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "goose breast",
+    "expected_item": "Meat of geese; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "whole goose",
+    "expected_item": "Meat of geese; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "Meat of turkeys; fresh or chilled",
+    "expected_item": "Meat of turkeys; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "fresh turkey meat",
+    "expected_item": "Meat of turkeys; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "turkey breast",
+    "expected_item": "Meat of turkeys; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "whole turkey",
+    "expected_item": "Meat of turkeys; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "Meat of pig with the bone; fresh or chilled",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "fresh pork with bone",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "pork chops",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "pork ribs",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "whole pork cuts",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "mixed poultry meat",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "Sugar beet",
+    "expected_item": "Sugar beet",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "whole sugar beet",
+    "expected_item": "Sugar beet",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "fresh sugar beet",
+    "expected_item": "Sugar beet",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "sugar beet roots",
+    "expected_item": "Sugar beet",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "Sugar cane",
+    "expected_item": "Sugar cane",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "whole sugar cane",
+    "expected_item": "Sugar cane",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "fresh sugar cane",
+    "expected_item": "Sugar cane",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "sugarcane stalks",
+    "expected_item": "Sugar cane",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "nut and seed mix",
+    "expected_item": "Other nuts (excluding wild edible nuts and groundnuts); in shell; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "spiced dried mango slices",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "dried fruit assortment",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green peppercorn clusters",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "fresh peppercorns",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "fresh coconut water",
+    "expected_item": "Coconuts; in shell",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "coconut pulp",
+    "expected_item": "Coconuts; in shell",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "wholegrain barley bread",
+    "expected_item": "Barley",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "barley flour",
+    "expected_item": "Barley",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "ginger tea blend",
+    "expected_item": "Ginger; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "spiced tea leaves",
+    "expected_item": "Tea leaves",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "turkey sausages",
+    "expected_item": "Meat of turkeys; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "chicken sausages",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "mixed goat and sheep meat",
+    "expected_item": "Meat of goat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "wild berry mix",
+    "expected_item": "Other berries and fruits of the genus vaccinium n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "forest berries",
+    "expected_item": "Other berries and fruits of the genus vaccinium n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "almond milk",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "coconut milk",
+    "expected_item": "Coconuts; in shell",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "soy milk",
+    "expected_item": "Other beans; green",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "coconut oil",
+    "expected_item": "Other oil seeds; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "sesame oil",
+    "expected_item": "Other oil seeds; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "sunflower oil",
+    "expected_item": "Other oil seeds; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "wheat flour",
+    "expected_item": "Wheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "rice flour",
+    "expected_item": "Rice",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "apple cider vinegar",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fermented apple juice",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "pepper sauce",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "hot chilli sauce",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "potato starch",
+    "expected_item": "Potatoes",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "corn starch",
+    "expected_item": "Maize (corn)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "cocoa powder",
+    "expected_item": "Cocoa beans",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "instant cocoa drink mix",
+    "expected_item": "Cocoa beans",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "turkey broth",
+    "expected_item": "Meat of turkeys; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "chicken stock",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "vegetable stock",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "mixed vegetable broth",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "grain-based cereal",
+    "expected_item": "Mixed grain",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "oat cereal",
+    "expected_item": "Oats",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "mixed spice seasoning",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "vegetable puree",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fruit puree",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "pork broth",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "pork gelatin",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "goat milk",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "sheep milk",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "fermented maize drink",
+    "expected_item": "Maize (corn)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "fermented rice drink",
+    "expected_item": "Rice",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "mixed dried vegetables",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "vegetable chips",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "mixed dried herbs",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "herb seasoning",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "nut butter",
+    "expected_item": "Other nuts (excluding wild edible nuts and groundnuts); in shell; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "peanut butter",
+    "expected_item": "Groundnuts; excluding shelled",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "fruit jam",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "berry jam",
+    "expected_item": "Other berries and fruits of the genus vaccinium n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "almond pieces",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "almond slivers",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "almond meal",
+    "expected_item": "Almonds; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "areca nut kernels",
+    "expected_item": "Areca nuts",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "bambara ground beans",
+    "expected_item": "Bambara beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole dried beans",
+    "expected_item": "Beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "bean kernels",
+    "expected_item": "Beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole brazil nuts",
+    "expected_item": "Brazil nuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried broad beans",
+    "expected_item": "Broad beans and horse beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole cashews",
+    "expected_item": "Cashew nuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "cashew kernels",
+    "expected_item": "Cashew nuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole chestnuts",
+    "expected_item": "Chestnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried chickpeas",
+    "expected_item": "Chick peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole chickpeas",
+    "expected_item": "Chick peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Groundnuts excluding shelled",
+    "expected_item": "Groundnuts; excluding shelled",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "raw peanuts",
+    "expected_item": "Groundnuts; excluding shelled",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole hazelnuts",
+    "expected_item": "Hazelnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Hempseed",
+    "expected_item": "Hempseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "hemp seeds",
+    "expected_item": "Hempseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried lentils",
+    "expected_item": "Lentils; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Melonseed",
+    "expected_item": "Melonseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "melon seeds",
+    "expected_item": "Melonseed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Mustard seed",
+    "expected_item": "Mustard seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "yellow mustard seeds",
+    "expected_item": "Mustard seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "brown mustard seeds",
+    "expected_item": "Mustard seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried pigeon peas",
+    "expected_item": "Pigeon peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "whole pistachios",
+    "expected_item": "Pistachios; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Poppy seed",
+    "expected_item": "Poppy seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "poppy seeds",
+    "expected_item": "Poppy seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Rape or colza seed",
+    "expected_item": "Rape or colza seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "rapeseed",
+    "expected_item": "Rape or colza seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Safflower seed",
+    "expected_item": "Safflower seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "safflower seeds",
+    "expected_item": "Safflower seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Sesame seed",
+    "expected_item": "Sesame seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "sesame seeds",
+    "expected_item": "Sesame seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Sunflower seed",
+    "expected_item": "Sunflower seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "sunflower seeds",
+    "expected_item": "Sunflower seed",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Taro",
+    "expected_item": "Taro",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "whole walnuts",
+    "expected_item": "Walnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "anise seeds (anis)",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "anise (misspelled: anice)",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "coriander seed",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "coriander (misspelled: corriander)",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "cumin seed",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "cumin (misspelled: kumin)",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "fennel seed",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "cinnamon (misspelled: cinnammon)",
+    "expected_item": "Cinnamon and cinnamon-tree flowers; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "cloves (misspelled: clovs)",
+    "expected_item": "Cloves (whole stems); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "whole cocoa beans",
+    "expected_item": "Cocoa beans",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "coffee beans (misspelled: coffe beans)",
+    "expected_item": "Coffee; green",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "ginger (misspelled: gingr)",
+    "expected_item": "Ginger; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "nutmeg (misspelled: nutmug)",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "cardamom (misspelled: cardamon)",
+    "expected_item": "Nutmeg; mace; cardamoms; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Pepper raw (Piper spp.)",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "pepper (misspelled: peper)",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "tea (misspelled: tee)",
+    "expected_item": "Tea leaves",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Other stimulant crops n.e.c.",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "spice mix (generic)",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "coffee grounds",
+    "expected_item": "Coffee; green",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "apple fruit",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "apples (misspelled: aplles)",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole apricots",
+    "expected_item": "Apricots",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "apricots (misspelled: aprycots)",
+    "expected_item": "Apricots",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole artichokes",
+    "expected_item": "Artichokes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green asparagus",
+    "expected_item": "Asparagus",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "asparagus spears",
+    "expected_item": "Asparagus",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole avocados",
+    "expected_item": "Avocados",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "avocado fruit",
+    "expected_item": "Avocados",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "avocados (misspelled: avacados)",
+    "expected_item": "Avocados",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "banana fruit",
+    "expected_item": "Bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "bananas (misspelled: bannanas)",
+    "expected_item": "Bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "blueberry fruit",
+    "expected_item": "Blueberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green horse beans",
+    "expected_item": "Broad beans and horse beans; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "white cabbage",
+    "expected_item": "Cabbages",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "cabbage heads",
+    "expected_item": "Cabbages",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "melon fruit",
+    "expected_item": "Cantaloupes and other melons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "carrots (misspelled: carrotts)",
+    "expected_item": "Carrots and turnips",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "broccoli heads",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "brocolli (misspelled)",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole cherries",
+    "expected_item": "Cherries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "capsicum peppers",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "chillies (misspelled: chillis)",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green chillies",
+    "expected_item": "Chillies and peppers; green (Capsicum spp. and Pimenta spp.)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh coconut flesh",
+    "expected_item": "Coconuts; in shell",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "coconut fruit",
+    "expected_item": "Coconuts; in shell",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "cranberry fruit",
+    "expected_item": "Cranberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "fresh gherkins",
+    "expected_item": "Cucumbers and gherkins",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole dates",
+    "expected_item": "Dates",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "aubergines",
+    "expected_item": "Eggplants (aubergines)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole figs",
+    "expected_item": "Figs",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "gooseberry fruit",
+    "expected_item": "Gooseberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "grapes (misspelled: graps)",
+    "expected_item": "Grapes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "young garlic shoots",
+    "expected_item": "Green garlic",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "kiwi fruit (misspelled: kiwee)",
+    "expected_item": "Kiwi fruit",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "leek stalks",
+    "expected_item": "Leeks and other alliaceous vegetables",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "citrus fruit (lemons/limes)",
+    "expected_item": "Lemons and limes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "lettuce heads",
+    "expected_item": "Lettuce and chicory",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "iceburg lettuce",
+    "expected_item": "Lettuce and chicory",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole carobs",
+    "expected_item": "Locust beans (carobs)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "mango fruit",
+    "expected_item": "Mangoes; guavas and mangosteens",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "button mushrooms",
+    "expected_item": "Mushrooms and truffles",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "mushrooms (misspelled: mushroms)",
+    "expected_item": "Mushrooms and truffles",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "okra pods",
+    "expected_item": "Okra",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole olives",
+    "expected_item": "Olives",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "onions (misspelled: oniuns)",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green shallots",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "orange fruit",
+    "expected_item": "Oranges",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "oranges (misspelled: orenges)",
+    "expected_item": "Oranges",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole papayas",
+    "expected_item": "Papayas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "pear fruit",
+    "expected_item": "Pears",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "green pea pods",
+    "expected_item": "Peas; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole pineapples",
+    "expected_item": "Pineapples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "cooking bananas",
+    "expected_item": "Plantains and cooking bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "spinach leaves",
+    "expected_item": "Spinach",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole strawberries",
+    "expected_item": "Strawberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "tomato fruit",
+    "expected_item": "Tomatoes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "tomatoes (misspelled: tomatos)",
+    "expected_item": "Tomatoes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "whole watermelons",
+    "expected_item": "Watermelons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "barley (misspelled: barlley)",
+    "expected_item": "Barley",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "corn (misspelled: corm)",
+    "expected_item": "Maize (corn)",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "potatoes (misspelled: potatos)",
+    "expected_item": "Potatoes",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "rice (misspelled: rize)",
+    "expected_item": "Rice",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "sweet potatoes (misspelled: sweat potatoes)",
+    "expected_item": "Sweet potatoes",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "wheat (misspelled: wheet)",
+    "expected_item": "Wheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "eggs (misspelled: egs)",
+    "expected_item": "Hen eggs in shell; fresh",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "bird eggs assorted",
+    "expected_item": "Eggs from other birds in shell; fresh; n.e.c.",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "milk (misspelled: milc)",
+    "expected_item": "Raw milk of cattle",
+    "expected_group": "Dairy and eggs"
+  },
+  {
+    "article": "beef (misspelled: beff)",
+    "expected_item": "Meat of cattle with the bone; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "chicken meat (misspelled: chikcen)",
+    "expected_item": "Meat of chickens; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "turkey meat (misspelled: turky)",
+    "expected_item": "Meat of turkeys; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "pork (misspelled: porck)",
+    "expected_item": "Meat of pig with the bone; fresh or chilled",
+    "expected_group": "Poultry and pig meat"
+  },
+  {
+    "article": "sugar beet (misspelled: suger beet)",
+    "expected_item": "Sugar beet",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "sugar cane (misspelled: suger cane)",
+    "expected_item": "Sugar cane",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "green peppercorns (fresh)",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "fresh peppercorn clusters",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "horse meat; fresh",
+    "expected_item": "Horse meat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "chilled horse meat",
+    "expected_item": "Horse meat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "equine meat; fresh",
+    "expected_item": "Horse meat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "equine meat cuts",
+    "expected_item": "Horse meat; fresh or chilled",
+    "expected_group": "Ruminant meat"
+  },
+  {
+    "article": "oil palm fruit",
+    "expected_item": "Oil palm fruit",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "fresh oil palm fruit",
+    "expected_item": "Oil palm fruit",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "palm fruit (whole)",
+    "expected_item": "Oil palm fruit",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "palm fruit (misspelled: oil pam fruit)",
+    "expected_item": "Oil palm fruit",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "mixed nuts in shell",
+    "expected_item": "Other nuts (excluding wild edible nuts and groundnuts); in shell; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "assorted nuts in shell",
+    "expected_item": "Other nuts (excluding wild edible nuts and groundnuts); in shell; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "acorns (non-wild edible)",
+    "expected_item": "Other nuts (excluding wild edible nuts and groundnuts); in shell; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "beechnuts",
+    "expected_item": "Other nuts (excluding wild edible nuts and groundnuts); in shell; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "ginkgo nuts",
+    "expected_item": "Other nuts (excluding wild edible nuts and groundnuts); in shell; n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "mixed pulses",
+    "expected_item": "Other pulses n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "assorted pulses",
+    "expected_item": "Other pulses n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "pulse mix (dry)",
+    "expected_item": "Other pulses n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "lupin beans (dry)",
+    "expected_item": "Other pulses n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "black-eyed peas (dry)",
+    "expected_item": "Peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "mung beans (dry)",
+    "expected_item": "Other pulses n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "adzuki beans (dry)",
+    "expected_item": "Other pulses n.e.c.",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dry peas",
+    "expected_item": "Peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dried peas",
+    "expected_item": "Peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "split peas",
+    "expected_item": "Peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "yellow split peas",
+    "expected_item": "Peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "green split peas",
+    "expected_item": "Peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "dry field peas",
+    "expected_item": "Peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Amla",
+    "expected_item": "Gooseberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Apple",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Arburgine",
+    "expected_item": "Eggplants (aubergines)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Arthichoke",
+    "expected_item": "Artichokes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Aubergines",
+    "expected_item": "Eggplants (aubergines)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Avacado",
+    "expected_item": "Avocados",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Avocado",
+    "expected_item": "Avocados",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Baby Aubergines",
+    "expected_item": "Eggplants (aubergines)",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Bayleaf",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Beetroot",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Betruit",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Bitter melon",
+    "expected_item": "Cantaloupes and other melons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Black Kale",
+    "expected_item": "Cabbages",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Blueberry",
+    "expected_item": "Blueberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Bread",
+    "expected_item": "Wheat",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Broccoli",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Brocolli",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Butternut squash",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cabbage",
+    "expected_item": "Cabbages",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Carrot",
+    "expected_item": "Carrots and turnips",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Carrots",
+    "expected_item": "Carrots and turnips",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cassava",
+    "expected_item": "Yautia",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Cauliflower",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Celery",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Chard",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cherry tomatoes",
+    "expected_item": "Tomatoes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Chestnut",
+    "expected_item": "Chestnuts; in shell",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Chipers",
+    "expected_item": "Chick peas; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Choy sum",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Clementerin",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Clementines",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cocoyam",
+    "expected_item": "Yautia",
+    "expected_group": "Grains, roots, starchy carbohydrates"
+  },
+  {
+    "article": "Coriander",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Courgette",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Courgettes",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Courli flowers",
+    "expected_item": "Cauliflowers and broccoli",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cowroby",
+    "expected_item": "Cabbages",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Cucumber",
+    "expected_item": "Cucumbers and gherkins",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Custard apple",
+    "expected_item": "Apples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Dill",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Duhdi",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Fababin",
+    "expected_item": "Broad beans and horse beans; dry",
+    "expected_group": "Legumes, beans, nuts"
+  },
+  {
+    "article": "Fellon",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Fennel",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Fennen",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Fresh pear",
+    "expected_item": "Pears",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Garlic",
+    "expected_item": "Green garlic",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Garlics",
+    "expected_item": "Green garlic",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Ginger",
+    "expected_item": "Ginger; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Grape",
+    "expected_item": "Grapes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Green beans",
+    "expected_item": "Broad beans and horse beans; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Green peas",
+    "expected_item": "Peas; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Lemon",
+    "expected_item": "Lemons and limes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Lettuce",
+    "expected_item": "Lettuce and chicory",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Limes",
+    "expected_item": "Lemons and limes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Loquat fruit",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Mandarine",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Mangoes",
+    "expected_item": "Mangoes; guavas and mangosteens",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Melon",
+    "expected_item": "Cantaloupes and other melons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Mint",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Mix salad",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Mushroom",
+    "expected_item": "Mushrooms and truffles",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Mushrooms",
+    "expected_item": "Mushrooms and truffles",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Necterines",
+    "expected_item": "Peaches and nectarines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Okro",
+    "expected_item": "Okra",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Onion",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Onions",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Papaya",
+    "expected_item": "Papayas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Parsely",
+    "expected_item": "Anise; badian; coriander; cumin; caraway; fennel and juniper berries; raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Parsnips",
+    "expected_item": "Carrots and turnips",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pawpaw",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pea shoot",
+    "expected_item": "Peas; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pear",
+    "expected_item": "Pears",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pepper",
+    "expected_item": "Pepper (Piper spp.); raw",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Pineaple",
+    "expected_item": "Pineapples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pineapple",
+    "expected_item": "Pineapples",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Plantain",
+    "expected_item": "Plantains and cooking bananas",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pomegranate",
+    "expected_item": "Other fruits; n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Pumpkin",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Radishes",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Rasp berry",
+    "expected_item": "Raspberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Red onions",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Rhuberb",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Rocket",
+    "expected_item": "Other vegetables; fresh n.e.c.",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Small peach",
+    "expected_item": "Peaches and nectarines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Spring onion",
+    "expected_item": "Onions and shallots; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Strawberry",
+    "expected_item": "Strawberries",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Sugar snap pea",
+    "expected_item": "Peas; green",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Sugarcane",
+    "expected_item": "Sugar cane",
+    "expected_group": "Sugar crops"
+  },
+  {
+    "article": "Sweet pepper",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "White watermelon",
+    "expected_item": "Watermelons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Yellow melon",
+    "expected_item": "Cantaloupes and other melons",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Satsuma",
+    "expected_item": "Tangerines; mandarins; clementines",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Parsley",
+    "expected_item": "Other stimulant; spice and aromatic crops; n.e.c.",
+    "expected_group": "Stimulants and spices"
+  },
+  {
+    "article": "Cherry toms",
+    "expected_item": "Tomatoes",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "corgettes",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "corguettes",
+    "expected_item": "Pumpkins; squash and gourds",
+    "expected_group": "Fruit and vegetables"
+  },
+  {
+    "article": "Chilis",
+    "expected_item": "Chillies and peppers; dry (Capsicum spp.; Pimenta spp.); raw",
+    "expected_group": "Fruit and vegetables"
+  }
+]

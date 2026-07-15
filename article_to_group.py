@@ -6,29 +6,27 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable, Optional
 import chardet
-
 import pandas as pd
 
-DEFAULT_CORPUS_PATH = Path(__file__).with_name("article_item_group_corpus.json")
+DEFAULT_CORPUS_PATH = Path("article_item_group_corpus.json")
+DEFAULT_DATA_PATH = Path("input", "impacts_aggregated_GBR.csv")
 
-with open("impacts_aggregated_GBR.csv", "rb") as f:
-    result = chardet.detect(f.read())
-    encoding = result["encoding"]
-csv = pd.read_csv(
-    "impacts_aggregated_GBR.csv", usecols=["Item", "Group"], encoding=encoding
-).reset_index(drop=True)
 
-item_pairs = csv.to_dict()
-group_pairs = csv.groupby("Group")["Item"].apply(list).to_dict()
-item_to_group = {
-    item: group
-    for group, items in group_pairs.items()
-    for item in items
-    if pd.notna(item)
-}
+def get_data(
+    data_path: Path | str = DEFAULT_DATA_PATH,
+) -> tuple[dict[str, list[str]], list[str], list[str]]:
+    with open(data_path, "rb") as f:
+        result = chardet.detect(f.read())
+        encoding = result["encoding"]
+    csv = pd.read_csv(
+        data_path, usecols=["Item", "Group"], encoding=encoding
+    ).reset_index(drop=True)
 
-ITEMS = sorted(csv["Item"].dropna().unique().tolist())
-GROUPS = sorted(csv["Group"].dropna().unique().tolist())
+    group_pairs = csv.groupby("Group")["Item"].apply(list).to_dict()
+
+    items = sorted(csv["Item"].dropna().unique().tolist())
+    groups = sorted(csv["Group"].dropna().unique().tolist())
+    return group_pairs, items, groups
 
 
 def normalize_text(value: object) -> str:
@@ -93,67 +91,6 @@ def load_article_group_corpus(
     df["article_norm"] = df["article"].map(canonicalize_text)
     df["group_norm"] = df["expected_group"].map(canonicalize_text)
     return df
-
-
-def build_test_corpus_dataframe(
-    corpus_df: pd.DataFrame, test_corpus: Iterable[str]
-) -> pd.DataFrame:
-    """Create a dataframe from the TESTCORPUS list for prediction."""
-    test_df = pd.DataFrame(
-        columns=[
-            "article",
-            "expected_item",
-            "expected_group",
-            "predicted_item",
-            "predicted_group",
-        ]
-    )
-    for article in test_corpus:
-        new_row = corpus_df[corpus_df["article"] == article].assign(
-            **{"predicted_item": "", "predicted_group": ""}
-        )
-        test_df = pd.concat([test_df, new_row], ignore_index=True)
-    test_df["article_norm"] = test_df["article"].map(canonicalize_text)
-    test_df["group_norm"] = ""
-    return test_df
-
-
-def train_test_split_corpus(
-    corpus_df: pd.DataFrame,
-    test_size: float = 0.2,
-    target_column: str = "expected_group",
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Split the corpus into random training and test sets using an 80/20 split."""
-    if not 0 < test_size < 1:
-        raise ValueError("test_size must be between 0 and 1")
-
-    if corpus_df.empty:
-        return corpus_df.copy().reset_index(drop=True), corpus_df.copy().reset_index(
-            drop=True
-        )
-
-    has_label = corpus_df[target_column].fillna("").astype(str).str.strip() != ""
-
-    labeled_df = corpus_df.loc[has_label].copy()
-    unlabeled_df = corpus_df.loc[~has_label].copy()
-
-    if not unlabeled_df.empty:
-        return labeled_df.reset_index(drop=True), unlabeled_df.reset_index(drop=True)
-
-    if labeled_df.empty:
-        return (
-            labeled_df.reset_index(drop=True),
-            pd.concat([unlabeled_df, labeled_df], ignore_index=True),
-        )
-
-    shuffled_df = labeled_df.sample(frac=1.0).reset_index(drop=True)
-    split_idx = int(len(shuffled_df) * (1 - test_size))
-    split_idx = max(1, min(split_idx, len(shuffled_df) - 1))
-
-    train_df = shuffled_df.iloc[:split_idx].copy()
-    test_df = shuffled_df.iloc[split_idx:].copy()
-
-    return train_df.reset_index(drop=True), test_df.reset_index(drop=True)
 
 
 @dataclass(frozen=True)
@@ -279,204 +216,11 @@ class HeuristicLabelModel:
 
         return best_label, best_score
 
-    def predict(
-        self, article: str, candidate_labels: Optional[Iterable[str]] = None
-    ) -> Optional[str]:
-        """Return the best predicted label for an article."""
-        best_label, _ = self.predict_with_score(
-            article, candidate_labels=candidate_labels
-        )
-        return best_label
-
-    def evaluate(
-        self, test_df: pd.DataFrame, labelset: Iterable[str]
-    ) -> dict[str, object]:
-        """Evaluate the model on a test set and return summary metrics."""
-        correct = 0
-        total = 0
-        predictions: list[tuple[str, str, str]] = []
-
-        for _, row in test_df.iterrows():
-            article = str(row["article"])
-            expected_label = (
-                str(row[self.target_column])
-                if row[self.target_column] is not None
-                else ""
-            )
-            predicted_label = self.predict(article, candidate_labels=labelset)
-            if predicted_label == expected_label:
-                correct += 1
-            predictions.append((article, expected_label, predicted_label or ""))
-            total += 1
-
-        accuracy = correct / total if total else 0.0
-        return {
-            "accuracy": accuracy,
-            "correct": correct,
-            "total": total,
-            "predictions": predictions,
-        }
-
 
 GroupHeuristicModel = HeuristicLabelModel
 
 
-def build_label_matcher(
-    corpus_path: Path | str = DEFAULT_CORPUS_PATH,
-    target_column: str = "expected_group",
-    test_size: float = 0.2,
-) -> tuple[HeuristicLabelModel, pd.DataFrame, pd.DataFrame]:
-    """Load the corpus, split it, train the heuristic model, and return the model."""
-    corpus_df = load_article_group_corpus(corpus_path)
-    train_df, test_df = train_test_split_corpus(
-        corpus_df, test_size=test_size, target_column=target_column
-    )
-    model = HeuristicLabelModel.train(train_df, target_column=target_column)
-    return model, train_df, test_df
-
-
-def evaluate_label_matcher(
-    corpus_path: Path | str = DEFAULT_CORPUS_PATH,
-    target_column: str = "expected_group",
-    test_corpus: Optional[Iterable[str]] = None,
-) -> dict[str, object]:
-    """Train on the full corpus and evaluate on TESTCORPUS when provided."""
-    corpus_df = load_article_group_corpus(corpus_path)
-    model = HeuristicLabelModel.train(corpus_df, target_column=target_column)
-    test_df = build_test_corpus_dataframe(corpus_df, test_corpus)
-
-    if target_column == "expected_item":
-        labelset = ITEMS
-    else:
-        labelset = GROUPS
-
-    predictions: list[tuple[str, str, str]] = []
-    for _, row in test_df.iterrows():
-        article = str(row["article"])
-        predicted_label = model.predict(article, candidate_labels=labelset)
-        predictions.append((article, "", predicted_label or ""))
-
-    evaluation = {
-        "accuracy": 0.0,
-        "correct": 0,
-        "total": len(test_df),
-        "predictions": predictions,
-    }
-    evaluation["train_size"] = len(corpus_df)
-    evaluation["test_size"] = len(test_df)
-    evaluation["labels"] = sorted(model.label_doc_counts.keys())
-    evaluation["target_column"] = target_column
-    return evaluation
-
-
-def evaluate_group_and_item_matchers(
-    corpus_path: Path | str = DEFAULT_CORPUS_PATH,
-    test_corpus: Optional[Iterable[str]] = None,
-) -> dict[str, dict[str, object]]:
-    """Evaluate separate group and item heuristic models on TESTCORPUS."""
-    return {
-        "group": evaluate_label_matcher(
-            corpus_path=corpus_path,
-            target_column="expected_group",
-            test_corpus=test_corpus,
-        ),
-        "item": evaluate_label_matcher(
-            corpus_path=corpus_path,
-            target_column="expected_item",
-            test_corpus=test_corpus,
-        ),
-    }
-
-
-def testing(use_score_reconciliation: bool = True):
-    corpus_df = load_article_group_corpus(DEFAULT_CORPUS_PATH)
-    train_df, test_df = train_test_split_corpus(corpus_df)
-    # train_df = corpus_df
-    # test_df = build_test_corpus_dataframe(corpus_df, TESTCORPUS)
-
-    group_model = HeuristicLabelModel.train(train_df, target_column="expected_group")
-    item_model = HeuristicLabelModel.train(train_df, target_column="expected_item")
-
-    print(f"Training size: {len(train_df)}")
-    print(f"Test size: {len(test_df)}")
-
-    item_accuracy = 0.0
-    group_accuracy = 0.0
-    total = 0.0
-
-    for article in test_df["article"]:
-        group_pred, group_score = group_model.predict_with_score(
-            article, candidate_labels=GROUPS
-        )
-        item_pred, item_score = item_model.predict_with_score(
-            article, candidate_labels=ITEMS
-        )
-
-        if use_score_reconciliation:
-            if item_pred and item_score >= group_score:
-                predicted_item = item_pred
-                predicted_group = item_to_group.get(predicted_item, group_pred or "")
-            else:
-                predicted_item = item_pred or ""
-                predicted_group = group_pred or ""
-                if group_pred:
-                    allowed_items = group_pairs.get(group_pred, [])
-                    if allowed_items:
-                        subset_df = corpus_df[
-                            corpus_df["expected_group"]
-                            .fillna("")
-                            .astype(str)
-                            .str.strip()
-                            == group_pred
-                        ]
-                        subset_df = subset_df[
-                            subset_df["expected_item"]
-                            .fillna("")
-                            .astype(str)
-                            .isin(allowed_items)
-                        ]
-                        if not subset_df.empty:
-                            refined_item_model = HeuristicLabelModel.train(
-                                subset_df, target_column="expected_item"
-                            )
-                            predicted_item, item_score = (
-                                refined_item_model.predict_with_score(
-                                    article, candidate_labels=allowed_items
-                                )
-                            )
-                            predicted_group = group_pred
-        else:
-            predicted_item = item_pred or ""
-            predicted_group = group_pred or ""
-
-        row = test_df[test_df["article"] == article]
-        expected_item = str(row["expected_item"].item())
-        expected_group = str(row["expected_group"].item())
-
-        if predicted_item == expected_item:
-            item_accuracy += 1
-        else:
-            print(
-                f"Item - {article!r} => predicted item={predicted_item!r}, predicted group={predicted_group!r}, expected item={expected_item!r}, expected_group={expected_group!r}, item score={item_score:.3f}, group_score={group_score:.3f}"
-            )
-        if predicted_group == expected_group:
-            group_accuracy += 1
-        else:
-            print(
-                f"Group - {article!r} => predicted item={predicted_item!r}, predicted group={predicted_group!r}, expected item={expected_item!r}, expected_group={expected_group!r}, item score={item_score:.3f}, group_score={group_score:.3f}"
-            )
-        total += 1
-
-        # print(
-        #    f"- {article!r} => predicted item={predicted_item!r}, predicted group={predicted_group!r}, item_score={item_score:.3f}, group_score={group_score:.3f}"
-        # )
-
-    print(
-        f"Accuracy - Items: {(item_accuracy / total):.4f}, Groups: {(group_accuracy / total):.4f}, Total: {((item_accuracy + group_accuracy)/(total * 2)):.4f}"
-    )
-    # accuracy_compare()
-
-
+# TESTING METHOD
 def accuracy_compare():
     incorrect1 = (
         pd.read_csv("Mandala_output.csv", usecols=["Mand_inflow_article", "temp_item"])
@@ -513,16 +257,17 @@ def accuracy_compare():
 
 
 def actual(test_df: pd.Series) -> list[str]:
-    train_df = load_article_group_corpus(DEFAULT_CORPUS_PATH)
+    group_pairs, items, groups = get_data()
+    train_df = load_article_group_corpus()
     group_model = HeuristicLabelModel.train(train_df, target_column="expected_group")
     item_model = HeuristicLabelModel.train(train_df, target_column="expected_item")
     result = []
     for article in test_df:
         group_pred, group_score = group_model.predict_with_score(
-            article, candidate_labels=GROUPS
+            article, candidate_labels=groups
         )
         item_pred, item_score = item_model.predict_with_score(
-            article, candidate_labels=ITEMS
+            article, candidate_labels=items
         )
         if item_pred and item_score >= group_score:
             predicted_item = item_pred

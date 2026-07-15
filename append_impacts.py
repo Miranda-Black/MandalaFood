@@ -4,17 +4,18 @@ import chardet
 
 from article_to_group import actual as match_article
 
-MANDALA = [
+MANDALA_IN = [
     "Mand_inflow_article",
     "Mand_inflow_accepted_weightkg",
     "Mand_inflow_offered_weightkg",
 ]
+MANDALA_OUT = ["Mand_outflow_article", "Mand_outflow_redistrib_weightkg"]
 TAWS = ["TAWS_article", "TAWS_article_weight_kg"]
 
 
 def getdata(base_dir: Path) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     mandala_inflow_df = pd.read_csv(base_dir / "Mandala_inflow_data.csv")
-    with open("impacts_aggregated_GBR.csv", "rb") as f:
+    with open(base_dir / "impacts_aggregated_GBR.csv", "rb") as f:
         result = chardet.detect(f.read())
         encoding = result["encoding"]
     impacts_aggregated_df = pd.read_csv(
@@ -59,7 +60,7 @@ def append_impacts_cols(
             continue
 
         matched_row = impacts_filtered_df[
-            impacts_filtered_df["Item"] == other_df.loc[idx, "predicted_item"]
+            impacts_filtered_df["Item"] == other_df.at[idx, "predicted_item"]
         ]
 
         for col in cols_to_add:
@@ -84,11 +85,20 @@ def impact_per_item(
 
 def main():
     base_dir = Path(__file__).resolve().parent
-    impacts_filtered_df, mandala_inflow_df, taws_df = getdata(base_dir)
-    mandala_df = append_impacts_cols(impacts_filtered_df, mandala_inflow_df, MANDALA)
-    mandala_df.to_csv(base_dir / "Mandala_output.csv", index=False)
+    in_dir = Path(base_dir, "input")
+    out_dir = Path(base_dir, "output")
+
+    impacts_filtered_df, mandala_inflow_df, taws_df = getdata(in_dir)
+
+    mandala_df = append_impacts_cols(impacts_filtered_df, mandala_inflow_df, MANDALA_IN)
+    mandala_df.to_csv(out_dir / "Mandala_output.csv", index=False)
+
     taws_df = append_impacts_cols(impacts_filtered_df, taws_df, TAWS)
-    taws_df.to_csv(base_dir / "TAWS_output.csv", index=False)
+    taws_df.to_csv(out_dir / "TAWS_output.csv", index=False)
+
+    mandala_outflow_df = pd.read_csv(in_dir / "Mandala_outflow_data.csv")
+    df = append_impacts_cols(impacts_filtered_df, mandala_outflow_df, MANDALA_OUT)
+    df.to_csv(out_dir / "Mandala_out_output.csv", index=False)
 
 
 main()

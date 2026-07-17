@@ -112,7 +112,7 @@ def sort_by_month(mandala, taws):
     _graphs(date_df, "month")
 
 
-def _destination(in_df: pd.DataFrame):
+def _destination(in_dfs: list[pd.DataFrame]):
     df = pd.DataFrame(
         columns=[
             "destination",
@@ -122,42 +122,43 @@ def _destination(in_df: pd.DataFrame):
             "kg",
         ]
     )
-    destination_col = [col for col in in_df.columns if "destination" in col][0]
-    weight_cols = [col for col in in_df.columns if "kg" in col]
-    if len(weight_cols) > 1:
-        weight_col = weight_cols[1]
-    else:
-        weight_col = weight_cols[0]
-    for idx, in_row in in_df.iterrows():
-        if pd.isna(in_df.at[idx, destination_col]):
-            destinations = ["Unknown"]
+    for in_df in in_dfs:
+        destination_col = [col for col in in_df.columns if "destination" in col][0]
+        weight_cols = [col for col in in_df.columns if "kg" in col]
+        if len(weight_cols) > 1:
+            weight_col = weight_cols[1]
         else:
-            destinations = str(in_df.at[idx, destination_col]).split(",")
-        for dest in destinations:
-            dest = dest.strip()
-            if dest not in df["destination"].to_list():
-                df.loc[len(df)] = [
-                    dest,
-                    in_row["ghg_total"] / len(destinations),
-                    in_row["bd_opp_total"] / len(destinations),
-                    in_row["bd_opp_total_err"] / len(destinations),
-                    in_row[weight_col] / len(destinations),
-                ]
+            weight_col = weight_cols[0]
+        for idx, in_row in in_df.iterrows():
+            if pd.isna(in_df.at[idx, destination_col]):
+                destinations = ["Unknown"]
             else:
-                row = df[df["destination"] == dest]
-                if pd.isna(in_row["ghg_total"]):
-                    row["kg"] += in_row[weight_col]
-                    continue
-                row["ghg_total"] += in_row["ghg_total"] / len(destinations)
-                row["bd_opp_total"] += in_row["bd_opp_total"] / len(destinations)
-                row["bd_opp_total_err"] += in_row["bd_opp_total_err"] / len(
-                    destinations
-                )
-                try:
-                    row["kg"] += float(in_row[weight_col]) / len(destinations)
-                except ValueError:
-                    row["kg"] += float(in_row[weight_cols[0]]) / len(destinations)
-                df[df["destination"] == dest] = row
+                destinations = str(in_df.at[idx, destination_col]).split(",")
+            for dest in destinations:
+                dest = dest.strip()
+                if dest not in df["destination"].to_list():
+                    df.loc[len(df)] = [
+                        dest,
+                        in_row["ghg_total"] / len(destinations),
+                        in_row["bd_opp_total"] / len(destinations),
+                        in_row["bd_opp_total_err"] / len(destinations),
+                        in_row[weight_col] / len(destinations),
+                    ]
+                else:
+                    row = df[df["destination"] == dest]
+                    if pd.isna(in_row["ghg_total"]):
+                        row["kg"] += in_row[weight_col]
+                        continue
+                    row["ghg_total"] += in_row["ghg_total"] / len(destinations)
+                    row["bd_opp_total"] += in_row["bd_opp_total"] / len(destinations)
+                    row["bd_opp_total_err"] += in_row["bd_opp_total_err"] / len(
+                        destinations
+                    )
+                    try:
+                        row["kg"] += float(in_row[weight_col]) / len(destinations)
+                    except ValueError:
+                        row["kg"] += float(in_row[weight_cols[0]]) / len(destinations)
+                    df[df["destination"] == dest] = row
     df["ghg_mean"] = df["ghg_total"] / df["kg"]
     df["bd_opp_mean"] = df["bd_opp_total"] / df["kg"]
     df["bd_opp_mean_err"] = df["bd_opp_total_err"] / df["kg"]
@@ -395,7 +396,7 @@ def main():
     bwm = pd.read_csv("input/BWM_waste.csv")
 
     sort_by_month(mandala_in, taws)
-    _destination(taws)
+    _destination([taws, mandala_out])
     mandala_extra(mandala_out)
     waste_vs_distrib(bwm, taws, mandala_out)
 

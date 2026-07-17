@@ -319,6 +319,24 @@ def format_df(df: pd.DataFrame):
     return df[[date, weight]].rename(columns={date: "date", weight: "kg"})
 
 
+def sort_month_column(df, col="month"):
+    # Split "M-YY" into numeric month and year
+    temp = df[col].str.split("-", expand=True)
+    temp.columns = ["m", "y"]
+
+    # Convert to integers
+    temp["m"] = temp["m"].astype(int)
+    temp["y"] = temp["y"].astype(int)
+
+    # Build a sortable key: year * 12 + month
+    df["_sort_key"] = temp["y"] * 12 + temp["m"]
+
+    # Sort by the key, preserve original appearance
+    df = df.sort_values("_sort_key").drop(columns="_sort_key")
+
+    return df
+
+
 def waste_vs_distrib(waste_df: pd.DataFrame, kg1: pd.DataFrame, kg2: pd.DataFrame):
     kg1 = refactor_dates(format_df(kg1))
     kg2 = refactor_dates(format_df(kg2))
@@ -326,11 +344,14 @@ def waste_vs_distrib(waste_df: pd.DataFrame, kg1: pd.DataFrame, kg2: pd.DataFram
     sum_df = pd.DataFrame(columns=["month", "kg"])
     distrib["month"] = ""
     for idx, row in distrib.iterrows():
-        in_date = str(distrib.at[idx, "date"])
-        if pd.isna(in_date) or re.search(r"\d", in_date) is None:
-            month = distrib.at[idx - 1, "month"]
+        in_date = distrib.at[idx, "date"]
+        if pd.isna(in_date) or re.search(r"\d", str(in_date)) is None:
+            distrib.at[idx, "date"] = distrib.at[idx - 1, "date"]
+            month = format_month("/.-", str(distrib.at[idx, "date"]))
         else:
-            month = format_month("/.-", in_date)
+            month = format_month("/.-", str(in_date))
+        if pd.isna(row["kg"]) or row["kg"] is None:
+            continue
         if month not in sum_df["month"].to_list():
             sum_df.loc[len(sum_df)] = [month, row["kg"]]
         else:
@@ -348,8 +369,21 @@ def waste_vs_distrib(waste_df: pd.DataFrame, kg1: pd.DataFrame, kg2: pd.DataFram
         waste_df.at[idx, "date"] = "-".join(date)
     waste_df = waste_df.rename(columns={"date": "month"})
 
-    plt.plot(waste_df["month"], waste_df["kg"], marker="o", label="wasted_kg")
-    plt.plot(sum_df["month"], sum_df["kg"], marker="o", label="redistributed_kg")
+    waste_df["month"] = waste_df["month"].astype(str)
+    sum_df["month"] = sum_df["month"].astype(str)
+    waste_df = waste_df.reset_index(drop=True)
+    sum_df = sum_df.reset_index(drop=True)
+    waste_df["month"] = waste_df["month"].astype(str)
+    sum_df["month"] = sum_df["month"].astype(str)
+
+    final_df = sort_month_column(
+        waste_df.merge(sum_df, on="month", how="outer", sort=False)
+    )
+
+    final_df.to_csv("output/waste_vs_redistribution.csv")
+
+    plt.plot(final_df["month"], final_df["kg_x"], marker="o", label="wasted_kg")
+    plt.plot(final_df["month"], final_df["kg_y"], marker="o", label="redistributed_kg")
     plt.savefig("output/graphs/waste_vs_redistribution.png")
     plt.close()
 

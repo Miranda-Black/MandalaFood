@@ -27,7 +27,6 @@ def ghg_bar(df: pd.DataFrame, col: str, measure: str):
     ax.set_xlabel(present(col) + "s")
     ax.set_ylabel(f"{present(measure)} GHGs/{col} (kg CO2eq)")
     fig.savefig(f"output/graphs/{col}_ghg_{measure}.png", bbox_inches="tight")
-    plt.show()
     plt.close(fig)
 
 
@@ -87,7 +86,6 @@ def dest_table(df: pd.DataFrame, incol: str):
     tbl.set_fontsize(7.5)
     plt.tight_layout()
     plt.savefig(f"output/graphs/destination_{incol}_table.png")
-    plt.show()
     plt.close(fig)
 
 

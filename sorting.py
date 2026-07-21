@@ -1,9 +1,11 @@
 import os
 import re
 import difflib
+from itertools import chain
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
+import graphs
+
+# GENERIC HELPERS
 
 
 def format_month(chars: str, string: str) -> str:
@@ -22,149 +24,30 @@ def format_month(chars: str, string: str) -> str:
     return templist[1] + "-" + templist[2]
 
 
-def _month(in_df: pd.DataFrame, date_df: pd.DataFrame):
-    date_col = [col for col in in_df.columns if "date" in col][0]
-    weight_cols = [col for col in in_df.columns if "kg" in col]
-    if len(weight_cols) > 1:
-        weight_col = weight_cols[1]
-    else:
-        weight_col = weight_cols[0]
-    for idx, in_row in in_df.iterrows():
-        in_date = str(in_df.at[idx, date_col])
-        if pd.isna(in_date) or re.search(r"\d", in_date) is None:
-            month = date_df.loc[len(date_df) - 1, "month"]
-        else:
-            month = format_month("/.-", in_date)
-        if month not in date_df["month"].to_list():
-            date_df.loc[len(date_df)] = [
-                month,
-                in_row["ghg_total"],
-                in_row["bd_opp_total"],
-                in_row["bd_opp_total_err"],
-                in_row[weight_col],
-            ]
-        else:
-            row = date_df[date_df["month"] == month]
-            if pd.isna(in_row["ghg_total"]):
-                row["kg"] += in_row[weight_col]
-                continue
-            row["ghg_total"] += in_row["ghg_total"]
-            row["bd_opp_total"] += in_row["bd_opp_total"]
-            row["bd_opp_total_err"] += in_row["bd_opp_total_err"]
-            try:
-                row["kg"] += float(in_row[weight_col])
-            except ValueError:
-                row["kg"] += float(in_row[weight_cols[0]])
-            date_df[date_df["month"] == month] = row
-    return date_df
+def format_df(df: pd.DataFrame):
+    date = [col for col in df.columns if "date" in col or "month" in col][0]
+    weight = [col for col in df.columns if "kg" in col or "tonnes" in col][0]
+    if "tonnes" in weight:
+        df[weight] = df[weight] * 1000
+    return df[[date, weight]].rename(columns={date: "date", weight: "kg"})
 
 
-def _graphs(df: pd.DataFrame, col: str):
-    os.makedirs("output/graphs", exist_ok=True)
+def sort_month_column(df, col="month"):
+    # Split "M-YY" into numeric month and year
+    temp = df[col].str.split("-", expand=True)
+    temp.columns = ["m", "y"]
 
-    fig, ax = plt.subplots()
-    ax.bar(df[col].to_list(), df["ghg_total"].to_list())
-    ax.set_title(f"total greenhouse gas emissions per {col}s")
-    ax.set_xlabel(f"{col}s")
-    ax.set_ylabel("total greenhouse gas emissions")
-    fig.savefig(f"output/graphs/{col}_ghg_total.png", bbox_inches="tight")
-    plt.close(fig)
+    # Convert to integers
+    temp["m"] = temp["m"].astype(int)
+    temp["y"] = temp["y"].astype(int)
 
-    fig, ax = plt.subplots()
-    ax.bar(df[col].to_list(), df["ghg_mean"].to_list())
-    ax.set_title(f"mean greenhouse gas emissions per {col}")
-    ax.set_xlabel(f"{col}s")
-    ax.set_ylabel("mean greenhouse gas emissions")
-    fig.savefig(f"output/graphs/{col}_ghg_mean.png", bbox_inches="tight")
-    plt.close(fig)
+    # Build a sortable key: year * 12 + month
+    df["_sort_key"] = temp["y"] * 12 + temp["m"]
 
-    bd_df = pd.DataFrame(columns=[col, "bd_opp"])
-    for c in df[col].to_list():
-        row = df.loc[df[col] == c]
-        bd_df.loc[len(bd_df)] = [c, row["bd_opp_total"].item()]
-        bd_df.loc[len(bd_df)] = [
-            c,
-            row["bd_opp_total"].item() - row["bd_opp_total_err"].item(),
-        ]
-        bd_df.loc[len(bd_df)] = [
-            c,
-            row["bd_opp_total"].item() + row["bd_opp_total_err"].item(),
-        ]
-    bd_df["bd_opp"] = pd.to_numeric(bd_df["bd_opp"], errors="coerce")
-    groups = [g["bd_opp"].dropna().tolist() for _, g in bd_df.groupby(col, sort=False)]
+    # Sort by the key, preserve original appearance
+    df = df.sort_values("_sort_key").drop(columns="_sort_key")
 
-    fig, ax = plt.subplots()
-    ax.boxplot(groups)
-    fig.savefig(f"output/graphs/{col}_bd_opp.png", bbox_inches="tight")
-    plt.close(fig)
-
-
-def sort_by_month(mandala, taws):
-    date_df = pd.DataFrame(
-        columns=["month", "ghg_total", "bd_opp_total", "bd_opp_total_err", "kg"]
-    )
-    date_df = _month(taws, date_df)
-    date_df = _month(mandala, date_df)
-    date_df["ghg_mean"] = date_df["ghg_total"] / date_df["kg"]
-    date_df["bd_opp_mean"] = date_df["bd_opp_total"] / date_df["kg"]
-    date_df["bd_opp_mean_err"] = date_df["bd_opp_total_err"] / date_df["kg"]
-    date_df.to_csv("output/month.csv", index=False)
-    _graphs(date_df, "month")
-
-
-def _destination(in_dfs: list[pd.DataFrame]):
-    df = pd.DataFrame(
-        columns=[
-            "destination",
-            "ghg_total",
-            "bd_opp_total",
-            "bd_opp_total_err",
-            "kg",
-        ]
-    )
-    for in_df in in_dfs:
-        destination_col = [col for col in in_df.columns if "destination" in col][0]
-        weight_cols = [col for col in in_df.columns if "kg" in col]
-        if len(weight_cols) > 1:
-            weight_col = weight_cols[1]
-        else:
-            weight_col = weight_cols[0]
-        for idx, in_row in in_df.iterrows():
-            if pd.isna(in_df.at[idx, destination_col]):
-                destinations = ["Unknown"]
-            else:
-                destinations = str(in_df.at[idx, destination_col]).split(",")
-            for dest in destinations:
-                dest = dest.strip()
-                if dest not in df["destination"].to_list():
-                    df.loc[len(df)] = [
-                        dest,
-                        in_row["ghg_total"] / len(destinations),
-                        in_row["bd_opp_total"] / len(destinations),
-                        in_row["bd_opp_total_err"] / len(destinations),
-                        in_row[weight_col] / len(destinations),
-                    ]
-                else:
-                    row = df[df["destination"] == dest]
-                    if pd.isna(in_row["ghg_total"]):
-                        row["kg"] += in_row[weight_col]
-                        continue
-                    row["ghg_total"] += in_row["ghg_total"] / len(destinations)
-                    row["bd_opp_total"] += in_row["bd_opp_total"] / len(destinations)
-                    row["bd_opp_total_err"] += in_row["bd_opp_total_err"] / len(
-                        destinations
-                    )
-                    try:
-                        row["kg"] += float(in_row[weight_col]) / len(destinations)
-                    except ValueError:
-                        row["kg"] += float(in_row[weight_cols[0]]) / len(destinations)
-                    df[df["destination"] == dest] = row
-    df["ghg_mean"] = df["ghg_total"] / df["kg"]
-    df["bd_opp_mean"] = df["bd_opp_total"] / df["kg"]
-    df["bd_opp_mean_err"] = df["bd_opp_total_err"] / df["kg"]
-    df = df.sort_values("destination", ascending=True).reset_index(drop=True)
-    df.to_csv("output/dest.csv", index=False)
-    _graphs(df, "destination")
+    return df
 
 
 def refactor_dates(df: pd.DataFrame):
@@ -180,7 +63,10 @@ def refactor_dates(df: pd.DataFrame):
     return df
 
 
-def refactor_dest(mandala: pd.DataFrame):
+# DESTINATION HELPERS
+
+
+def refactor_dest(in_df: pd.DataFrame, destcol: str, weightcol: str):
     df = pd.DataFrame(
         columns=[
             "date",
@@ -192,14 +78,19 @@ def refactor_dest(mandala: pd.DataFrame):
             "bd_opp_total_err",
         ]
     ).reset_index(drop=True)
-    for _, row in mandala.iterrows():
-        destinations = row["Mand_outflow_destination"].split("/")
+    date_col = [col for col in in_df.columns if "date" in col][0]
+    article_col = [col for col in in_df.columns if "article" in col][0]
+    for _, row in in_df.iterrows():
+        if pd.isna(row[destcol]):
+            destinations = ["Unknown"]
+        else:
+            destinations = re.split(r"[,/]", row[destcol])
         for dest in destinations:
             df.loc[len(df)] = [
-                row["Mand_outflow_date"],
+                row[date_col],
                 dest,
-                row["Mand_outflow_article"],
-                row["Mand_outflow_redistrib_weightkg"] / len(destinations),
+                row[article_col],
+                row[weightcol] / len(destinations),
                 row["ghg_total"] / len(destinations),
                 row["bd_opp_total"] / len(destinations),
                 row["bd_opp_total_err"] / len(destinations),
@@ -239,8 +130,168 @@ def group_dest(destinations: list[str], threshold: float = 0.75) -> dict[str, st
     return mapping
 
 
+# DESTINATION
+
+
+def double_split(in_str: str):
+    if in_str is None or str(in_str) == "nan":
+        return ["Unknown"]
+    else:
+        return re.split(r"[,/]", in_str)
+
+
+def _destination(in_dfs: list[pd.DataFrame]):
+    df = pd.DataFrame(
+        columns=[
+            "destination",
+            "ghg_total",
+            "bd_opp_total",
+            "bd_opp_total_err",
+            "kg",
+        ]
+    )
+
+    all_dest = []
+    for in_df in in_dfs:
+        dest = [col for col in in_df.columns if "destination" in col][0]
+        all_dest += map(double_split, in_df[dest].unique())
+    all_dest = sorted(
+        list(set(map((lambda d: d.strip()), chain.from_iterable(all_dest))))
+    )
+    dest_dict = group_dest(all_dest)
+
+    for in_df in in_dfs:
+        # find relevant column names in the incoming dataframe
+        orig_destination_col = [col for col in in_df.columns if "destination" in col][0]
+        weight_cols = [col for col in in_df.columns if "kg" in col]
+        if len(weight_cols) > 1:
+            weight_col = weight_cols[1]
+        else:
+            weight_col = weight_cols[0]
+
+        # refactor_dest returns rows already split by destination
+        ref_df = refactor_dest(in_df, orig_destination_col, weight_col)
+
+        # normalise / group similar destination names
+        ref_df["destination"] = ref_df["destination"].apply(
+            lambda d: dest_dict.get(d, "Unknown") if pd.notna(d) else "Unknown"
+        )
+
+        # accumulate into the result dataframe; ref_df rows are per destination
+        for _, in_row in ref_df.iterrows():
+            dest = (
+                in_row["destination"] if pd.notna(in_row["destination"]) else "Unknown"
+            )
+
+            if dest not in df["destination"].to_list():
+                ghg = (
+                    in_row.get("ghg_total", 0)
+                    if not pd.isna(in_row.get("ghg_total", 0))
+                    else 0
+                )
+                bd = (
+                    in_row.get("bd_opp_total", 0)
+                    if not pd.isna(in_row.get("bd_opp_total", 0))
+                    else 0
+                )
+                bd_err = (
+                    in_row.get("bd_opp_total_err", 0)
+                    if not pd.isna(in_row.get("bd_opp_total_err", 0))
+                    else 0
+                )
+                kg = in_row.get("kg", 0) if not pd.isna(in_row.get("kg", 0)) else 0
+                df.loc[len(df)] = [dest, ghg, bd, bd_err, kg]
+            else:
+                idxs = df["destination"] == dest
+                # if ghg is missing, only add kg
+                if pd.isna(in_row.get("ghg_total", None)):
+                    df.loc[idxs, "kg"] += (
+                        in_row.get("kg", 0) if not pd.isna(in_row.get("kg", 0)) else 0
+                    )
+                    continue
+                df.loc[idxs, "ghg_total"] += in_row.get("ghg_total", 0)
+                df.loc[idxs, "bd_opp_total"] += in_row.get("bd_opp_total", 0)
+                df.loc[idxs, "bd_opp_total_err"] += in_row.get("bd_opp_total_err", 0)
+                df.loc[idxs, "kg"] += (
+                    in_row.get("kg", 0) if not pd.isna(in_row.get("kg", 0)) else 0
+                )
+    df["ghg_mean"] = df["ghg_total"] / df["kg"]
+    df["bd_opp_mean"] = df["bd_opp_total"] / df["kg"]
+    df["bd_opp_mean_err"] = df["bd_opp_total_err"] / df["kg"]
+    df = df.sort_values("destination", ascending=True).reset_index(drop=True)
+    df.to_csv("output/dest.csv", index=False)
+    graphs.dest_table(df, "ghg_total")
+    graphs.ghg_bar(df, "destination", "total")
+    graphs.dest_table(df, "ghg_mean")
+    graphs.ghg_bar(df, "destination", "mean")
+    graphs.dest_table(df, "bd_opp_total")
+    graphs.bd_error(df, "destination")
+
+
+# MONTH
+
+
+def _month(in_df: pd.DataFrame, date_df: pd.DataFrame):
+    date_col = [col for col in in_df.columns if "date" in col][0]
+    weight_cols = [col for col in in_df.columns if "kg" in col]
+    if len(weight_cols) > 1:
+        weight_col = weight_cols[1]
+    else:
+        weight_col = weight_cols[0]
+    for idx, in_row in in_df.iterrows():
+        in_date = str(in_df.at[idx, date_col])
+        if pd.isna(in_date) or re.search(r"\d", in_date) is None:
+            month = date_df.loc[len(date_df) - 1, "month"]
+        else:
+            month = format_month("/.-", in_date)
+        if month not in date_df["month"].to_list():
+            date_df.loc[len(date_df)] = [
+                month,
+                in_row["ghg_total"],
+                in_row["bd_opp_total"],
+                in_row["bd_opp_total_err"],
+                in_row[weight_col],
+            ]
+        else:
+            row = date_df[date_df["month"] == month]
+            if pd.isna(in_row["ghg_total"]):
+                row["kg"] += in_row[weight_col]
+                continue
+            row["ghg_total"] += in_row["ghg_total"]
+            row["bd_opp_total"] += in_row["bd_opp_total"]
+            row["bd_opp_total_err"] += in_row["bd_opp_total_err"]
+            try:
+                row["kg"] += float(in_row[weight_col])
+            except ValueError:
+                row["kg"] += float(in_row[weight_cols[0]])
+            date_df[date_df["month"] == month] = row
+    return date_df
+
+
+def sort_by_month(mandala, taws):
+    date_df = pd.DataFrame(
+        columns=["month", "ghg_total", "bd_opp_total", "bd_opp_total_err", "kg"]
+    )
+    date_df = _month(taws, date_df)
+    date_df = _month(mandala, date_df)
+    date_df["ghg_mean"] = date_df["ghg_total"] / date_df["kg"]
+    date_df["bd_opp_mean"] = date_df["bd_opp_total"] / date_df["kg"]
+    date_df["bd_opp_mean_err"] = date_df["bd_opp_total_err"] / date_df["kg"]
+    date_df.to_csv("output/month.csv", index=False)
+    graphs.ghg_bar(date_df, "month", "total")
+    graphs.ghg_bar(date_df, "month", "mean")
+    graphs.bd_error(date_df, "month")
+
+
+# MANDALA
+
+
 def mandala_extra(mandala: pd.DataFrame):
-    refactored = refactor_dest(refactor_dates(mandala))
+    refactored = refactor_dest(
+        refactor_dates(mandala),
+        str([col for col in mandala.columns if "destination" in col][0]),
+        str([col for col in mandala.columns if "weight" in col][0]),
+    )
     refactored["month"] = refactored["date"].apply(lambda d: format_month("/", d))
     dest_dict = group_dest(list(refactored["destination"].unique()))
     refactored["dest"] = refactored["destination"].apply(lambda d: dest_dict[d])
@@ -273,69 +324,11 @@ def mandala_extra(mandala: pd.DataFrame):
                 sum(subset2["bd_opp_total_err"]) / sum(subset2["kg"]),
             ]
     final.to_csv("output/month_dest.csv")
-    extra_graph(final, "ghg_total")
-    extra_graph(final, "ghg_mean")
+    graphs.ghg_stacked_bar(final, "total")
+    graphs.ghg_stacked_bar(final, "mean")
 
 
-def extra_graph(final: pd.DataFrame, col: str):
-    final[col] = pd.to_numeric(final[col], errors="coerce").fillna(0)
-    graph = final.pivot(index="month", columns="destination", values=col).fillna(0)
-    graph = graph.sort_index()
-
-    indices = np.arange(len(graph.index))
-    bottom = np.zeros(len(graph.index))
-
-    destinations = graph.columns.tolist()
-
-    colours = plt.get_cmap("tab20").colors
-    colour_map = {
-        dest: colours[i % len(colours)] for i, dest in enumerate(destinations)
-    }
-
-    for dest in graph.columns:
-        plt.bar(
-            indices,
-            graph[dest].values,
-            bottom=bottom,
-            label=dest,
-            color=colour_map[dest],
-        )
-        bottom += graph[dest].values
-    plt.xticks(indices, graph.index)
-    plt.xlabel("month")
-    plt.ylabel(col)
-    max_stack = graph.sum(axis=1).max()
-    plt.ylim(0, max(1, max_stack * 1.1))
-    plt.legend(title="destination", bbox_to_anchor=(1.05, 1), loc="upper left")
-    plt.tight_layout()
-    plt.savefig(f"output/graphs/mandala_dest_{col}.png")
-    plt.close()
-
-
-def format_df(df: pd.DataFrame):
-    date = [col for col in df.columns if "date" in col or "month" in col][0]
-    weight = [col for col in df.columns if "kg" in col or "tonnes" in col][0]
-    if "tonnes" in weight:
-        df[weight] = df[weight] * 1000
-    return df[[date, weight]].rename(columns={date: "date", weight: "kg"})
-
-
-def sort_month_column(df, col="month"):
-    # Split "M-YY" into numeric month and year
-    temp = df[col].str.split("-", expand=True)
-    temp.columns = ["m", "y"]
-
-    # Convert to integers
-    temp["m"] = temp["m"].astype(int)
-    temp["y"] = temp["y"].astype(int)
-
-    # Build a sortable key: year * 12 + month
-    df["_sort_key"] = temp["y"] * 12 + temp["m"]
-
-    # Sort by the key, preserve original appearance
-    df = df.sort_values("_sort_key").drop(columns="_sort_key")
-
-    return df
+# WASTE
 
 
 def waste_vs_distrib(waste_df: pd.DataFrame, kg1: pd.DataFrame, kg2: pd.DataFrame):
@@ -383,10 +376,7 @@ def waste_vs_distrib(waste_df: pd.DataFrame, kg1: pd.DataFrame, kg2: pd.DataFram
 
     final_df.to_csv("output/waste_vs_redistribution.csv")
 
-    plt.plot(final_df["month"], final_df["kg_x"], marker="o", label="wasted_kg")
-    plt.plot(final_df["month"], final_df["kg_y"], marker="o", label="redistributed_kg")
-    plt.savefig("output/graphs/waste_vs_redistribution.png")
-    plt.close()
+    graphs.waste_stacked(final_df)
 
 
 def main():
@@ -394,6 +384,8 @@ def main():
     mandala_out = pd.read_csv("output/Mandala_out_output.csv")
     taws = pd.read_csv("output/TAWS_output.csv")
     bwm = pd.read_csv("input/BWM_waste.csv")
+
+    os.makedirs("output/graphs", exist_ok=True)
 
     sort_by_month(mandala_in, taws)
     _destination([taws, mandala_out])

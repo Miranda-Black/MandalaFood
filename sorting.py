@@ -521,7 +521,7 @@ def main():
         mandala_out,
         df_impacts,
         df_groups,
-        pd.read_csv("other/odf.csv"),
+        pd.read_csv("impacts/group_quartile_impacts.csv"),
     )
     unknown_df = mandala_varying_weight(mandala_in, mandala_out)
 

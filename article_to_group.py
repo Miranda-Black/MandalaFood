@@ -1,20 +1,37 @@
+"""
+Module for matching food articles to standardized items and groups using heuristic label models.
+Provides functions to train label models from a corpus and predict item/group mappings
+for new articles.
+Created by: Miranda Black
+Created on: 08 July 2026 11:46:43
+"""
+
 from __future__ import annotations
 import math
 import re
+from typing import Hashable, Any, Iterable, Optional
 from collections import Counter
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Optional
 import chardet
 import pandas as pd
 
 DEFAULT_CORPUS_PATH = Path("article_item_group_corpus.json")
 DEFAULT_DATA_PATH = Path("input", "impacts_aggregated_GBR.csv")
 
+# %%
+
 
 def get_data(
     data_path: Path | str = DEFAULT_DATA_PATH,
-) -> tuple[dict[str, list[str]], list[str], list[str]]:
+) -> tuple[dict[Hashable, list[Any]], list[Any], list[Any]]:
+    """
+    Load and structure impact data from CSV file.
+
+    :param data_path: Path to impacts file
+    :return: Dictionary matching groups to items, list of all items, list of all groups
+    (presented in tuple)
+    """
     with open(data_path, "rb") as f:
         result = chardet.detect(f.read())
         encoding = result["encoding"]
@@ -93,8 +110,15 @@ def load_article_group_corpus(
     return df
 
 
+# %%
+
+
 @dataclass(frozen=True)
 class HeuristicLabelModel:
+    """
+    The heuristic model that matches articles to items and groups
+    """
+
     target_column: str
     label_token_counts: dict[str, Counter[str]]
     label_doc_counts: Counter[str]
@@ -172,6 +196,9 @@ class HeuristicLabelModel:
         )
 
     def _score_label(self, article: str, label: str) -> float:
+        """
+        Calculates score for a given label attempting to match the article
+        """
         article_norm = canonicalize_text(article)
         if not article_norm:
             return float("-inf")
@@ -219,9 +246,16 @@ class HeuristicLabelModel:
 
 GroupHeuristicModel = HeuristicLabelModel
 
+# %%
+
 
 # TESTING METHOD
 def accuracy_compare():
+    """
+    Compare accuracy of two different article-to-item mapping methods.
+    Reads two output files with predicted items and compares to expected values from corpus.
+    Prints accuracy metrics for both methods.
+    """
     incorrect1 = (
         pd.read_csv("Mandala_output.csv", usecols=["Mand_inflow_article", "temp_item"])
         .reset_index(drop=True)
@@ -256,21 +290,38 @@ def accuracy_compare():
     print(f"Second: {(accuracy2 / total):.4f}")
 
 
+# %%
+
+
 def actual(test_df: pd.Series) -> list[str]:
+    """
+    Predict item names for a series of food articles using trained heuristic label models.
+
+    :param test_df: Series of article names to predict items for
+    :return: List of predicted item names, one per input article
+    """
     group_pairs, items, groups = get_data()
     train_df = load_article_group_corpus()
     group_model = HeuristicLabelModel.train(train_df, target_column="expected_group")
     item_model = HeuristicLabelModel.train(train_df, target_column="expected_item")
     result = []
     for article in test_df:
+
+        # Get separate group and item predictions using the heuristic models
         group_pred, group_score = group_model.predict_with_score(
             article, candidate_labels=groups
         )
         item_pred, item_score = item_model.predict_with_score(
             article, candidate_labels=items
         )
+
+        # If the models have a greater confidence in matching to item than group, return
+        # predicted item
         if item_pred and item_score >= group_score:
             predicted_item = item_pred
+
+        # Otherwise, repeat prediction of item using a subset of the group labels that
+        # it predicts to be correct
         else:
             predicted_item = item_pred or ""
             if group_pred:

@@ -66,9 +66,9 @@ Requires an input and an output folder in the same folder to work.
 
 input should contain:
 * BWM_waste.csv
-* commodity_crosswalk.csv (can be found here: https://github.com/thomasball42/bd_leakage_ratios/blob/main/data/commodity_crosswalk.csv)
-* group_quartile_impacts.csv (can be calculated from here: https://github.com/thomasball42/Quantifying-the-impact-of-food-we-eat-on-species-extinctions)
-* impacts_aggregated_GBR.csv (can be calculated from here: https://github.com/thomasball42/mrio_pipeline)
+* commodity_crosswalk.csv (can be found [here](https://github.com/thomasball42/bd_leakage_ratios/blob/main/data/commodity_crosswalk.csv))
+* group_quartile_impacts.csv (can be calculated from [here](https://github.com/thomasball42/Quantifying-the-impact-of-food-we-eat-on-species-extinctions))
+* impacts_aggregated_GBR.csv (can be calculated from [here](https://github.com/thomasball42/mrio_pipeline))
 * Mandala_inflow_data.csv
 * Mandala_outflow_data.csv
 * TAWS_quantitative_surplus_data.csv
